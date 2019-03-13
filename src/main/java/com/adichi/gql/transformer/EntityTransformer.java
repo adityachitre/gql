@@ -15,7 +15,7 @@ public final class EntityTransformer {
 
         PostDTO dto = new PostDTO();
         dto.setId(post.getId());
-        dto.setTitle(post.getTitle());
+        dto.setMsg(post.getMsg());
         dto.setCategory(post.getCategory());
         dto.setAuthorId(post.getAuthor().getId());
         return dto;
@@ -33,6 +33,7 @@ public final class EntityTransformer {
 
         AuthorDTO dto = new AuthorDTO();
         dto.setId(author.getId());
+        dto.setName(author.getName());
         dto.setEmail(author.getEmail());
         dto.setPostIds(author.getPosts()
                 .stream()

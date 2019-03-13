@@ -18,7 +18,7 @@ public class DatabaseLoader {
         return args -> {
 
             Author author = authorRepository.save(createAuthor("John Smith", "john@smith.com"));
-            Post post = createPost("Clean Code", "software");
+            Post post = createPost("Hahaha!! LOL!! ROFL!!", "How to write clean code?");
             post.setAuthor(author);
             log.info("Pre-loading: " + postRepository.save(post));
         };
@@ -32,10 +32,10 @@ public class DatabaseLoader {
         return author;
     }
 
-    private Post createPost(String title, String category) {
+    private Post createPost(String msg, String category) {
 
         Post post = new Post();
-        post.setTitle(title);
+        post.setMsg(msg);
         post.setCategory(category);
         return post;
     }

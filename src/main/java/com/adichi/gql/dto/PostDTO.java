@@ -6,7 +6,7 @@ import lombok.Data;
 public class PostDTO {
 
     private Long id;
-    private String title;
+    private String msg;
     private String category;
     private Long authorId;
 }
